@@ -19,12 +19,12 @@ class Diagnostics(diagnostics_pb2_grpc.DiagnosticsServicer):
 
         return diagnostics_pb2.Diagnostic(
             cpu=cpu,
-            freeRAM=virtual_memory.free / (2 ** 30),
-            usedRAM=virtual_memory.used / (2 ** 30),
-            totalRAM=virtual_memory.total / (2 ** 30),
-            freeHDD=hdd.free / (2 ** 30),
-            usedHDD=hdd.used / (2 ** 30),
-            totalHDD=hdd.total / (2 ** 30)
+            freeRAM=virtual_memory.free / (2 ** 20),
+            usedRAM=virtual_memory.used / (2 ** 20),
+            totalRAM=virtual_memory.total / (2 ** 20),
+            freeHDD=hdd.free / (2 ** 20),
+            usedHDD=hdd.used / (2 ** 20),
+            totalHDD=hdd.total / (2 ** 20)
         )
 
 
